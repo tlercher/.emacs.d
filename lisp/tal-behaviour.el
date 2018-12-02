@@ -29,6 +29,24 @@
 ;; C-z by default suspends the session, useless.
 (bind-key* "C-z" 'undo)
 
+(require 'windmove)
+
+(bind-key* "<M-left>" 'windmove-left)
+(bind-key* "<M-up>" 'windmove-up)
+(bind-key* "<M-right>" 'windmove-right)
+(bind-key* "<M-down>" 'windmove-down)
+
+(use-package expand-region
+  :bind (("M-2" . er/expand-region)
+         ("M-1" . er/contract-region)))
+
+
+(use-package multiple-cursors
+  :bind (( "C-c RET" . mc/mark-all-like-this-dwim)
+         ( "M-3" . mc/mark-next-like-this)
+         ( "M-4" . mc/mark-previous-like-this)
+         ( "M-#" . mc/unmark-next-like-this)
+         ( "M-$" . mc/unmark-previous-like-this)))
 
 ;; Store backups in a single directory (/var/tmp/emacs-backups) so that
 ;; they don’t clutter up my filesystem.

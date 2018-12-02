@@ -1,7 +1,4 @@
 ;;; -*- lexical-binding: t; -*-
-;;;
-;;; ~/.emacs.d/init.el
-;;;
 
 
 ;; Init/Startup optimization
@@ -46,7 +43,12 @@
 (require 'tal-behaviour)
 (require 'tal-git)
 (require 'tal-go)
+(require 'tal-lisp)
 (require 'tal-markdown)
 (require 'tal-prog)
 (require 'tal-ido)
 (require 'tal-web)
+
+;; Start server
+(load "server")
+(unless (server-running-p) (server-start))

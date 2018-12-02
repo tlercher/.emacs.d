@@ -5,3 +5,6 @@ elpa
 /ac-comphist.dat
 /.emacs.desktop
 /history
+/.mc-lists.el
+/cider-history
+/url

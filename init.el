@@ -46,8 +46,14 @@
 (require 'tal-lisp)
 (require 'tal-markdown)
 (require 'tal-prog)
-(require 'tal-ido)
+(require 'tal-ivy)
+;(require 'tal-ido)
 (require 'tal-web)
+
+
+;; Maybe i should start a 'tal-emacs thing
+(use-package neotree
+  :bind (([f8] . neotree-toggle)))
 
 ;; Start server
 (load "server")

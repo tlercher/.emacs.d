@@ -30,11 +30,14 @@
 (bind-key* "C-z" 'undo)
 
 (require 'windmove)
-
 (bind-key* "<M-left>" 'windmove-left)
 (bind-key* "<M-up>" 'windmove-up)
 (bind-key* "<M-right>" 'windmove-right)
 (bind-key* "<M-down>" 'windmove-down)
+
+;; Make scrolling more natural in GUI Emacs
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control) . nil)))
+(setq mouse-wheel-progressive-speed nil)
 
 (use-package expand-region
   :bind (("M-2" . er/expand-region)

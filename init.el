@@ -41,6 +41,7 @@
 ;; Load provided (required) configurations
 (require 'tal-appearance)
 (require 'tal-behaviour)
+(require 'tal-company)
 (require 'tal-git)
 (require 'tal-go)
 (require 'tal-lisp)

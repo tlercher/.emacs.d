@@ -1,6 +1,7 @@
 auto-save-list
 backups
 elpa
+/.cache
 /ido.last
 /ac-comphist.dat
 /.emacs.desktop

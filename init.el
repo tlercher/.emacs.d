@@ -53,8 +53,8 @@
 
 
 ;; Maybe i should start a 'tal-emacs thing
-(use-package neotree
-  :bind (([f8] . neotree-toggle)))
+(use-package treemacs
+  :bind ([f8] . treemacs))
 
 ;; Start server
 (load "server")

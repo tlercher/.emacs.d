@@ -105,7 +105,6 @@
 	      " - Emacs")
 ))
 
-
 ;; Respect .editorconfig files
 (use-package editorconfig
   :config

@@ -17,7 +17,7 @@
   (progn
     (setq gofmt-command "goimports"))
   :config
-  (add-hook 'go-mode-hook 'tal-go-mode-mode))
+  (add-hook 'go-mode-hook 'tal-go-mode-hook))
 
 (use-package go-eldoc
   :ensure t
@@ -25,6 +25,11 @@
   :init
 (add-hook 'go-mode-hook 'go-eldoc-setup))
 
+(use-package company-go
+  :init
+ (add-hook 'go-mode-hook (lambda ()
+                          (set (make-local-variable 'company-backends) '(company-go))
+                          (company-mode))))
 
 (let ((path "~/go/src/github.com/stapelberg/expanderr/expanderr.el"))
   (if (file-exists-p path)

@@ -5,6 +5,8 @@
 
 
 (use-package swiper
+  :ensure t
+  :defer t
   :diminish ivy-mode
   :bind (("C-c C-r" . ivy-resume)
          ("C-x m" . counsel-M-x)

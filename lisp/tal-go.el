@@ -13,6 +13,7 @@
 
 (use-package go-mode
   :ensure t
+  :defer t
   :init
   (progn
     (setq gofmt-command "goimports"))
@@ -21,13 +22,14 @@
 
 (use-package go-eldoc
   :ensure t
-  :defer
+  :defer t
   :init
-(add-hook 'go-mode-hook 'go-eldoc-setup))
+  (add-hook 'go-mode-hook 'go-eldoc-setup))
 
 (use-package company-go
+  :defer t
   :init
- (add-hook 'go-mode-hook (lambda ()
+  (add-hook 'go-mode-hook (lambda ()
                           (set (make-local-variable 'company-backends) '(company-go))
                           (company-mode))))
 

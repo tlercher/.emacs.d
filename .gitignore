@@ -10,3 +10,4 @@ elpa
 /cider-history
 /url
 /recentf
+*.elc

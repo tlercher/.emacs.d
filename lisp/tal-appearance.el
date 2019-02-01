@@ -15,7 +15,8 @@
 ;; Load and set theme
 (use-package dracula-theme
   :init (load-theme 'dracula t)
-  :ensure t)
+  :ensure t
+  :defer f)
 
 
 ;; Always display line and column numbers
@@ -28,6 +29,8 @@
 ;; 80 chars width
 (setq-default fill-column 80)
 (use-package visual-fill-column
+  :ensure t
+  :defer t
   :config
   (add-hook 'visual-line-mode-hook #'visual-fill-column-mode))
 

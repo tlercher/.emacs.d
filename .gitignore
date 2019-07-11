@@ -3,6 +3,7 @@ backups
 elpa
 /.cache
 /ido.last
+/.lsp-*
 /ac-comphist.dat
 /.emacs.desktop
 /history

@@ -8,7 +8,7 @@
 (global-hl-line-mode 1)
 
 ;; Font
-(setq default-frame-alist '((font . "Go Mono 12")))
+(setq default-frame-alist '((font . "SF Mono 12")))
 
 
 

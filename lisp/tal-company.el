@@ -7,4 +7,8 @@
   :config
   (setq company-show-numbers t))
 
+(use-package company-lsp
+  :after company
+  :commands company-lsp)
+
 (provide 'tal-company)

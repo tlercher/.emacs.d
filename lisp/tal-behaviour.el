@@ -77,7 +77,7 @@
 (let ((backupdir
        (expand-file-name (concat user-emacs-directory "backups"))))
   (mkdir backupdir t)
-  (setq backup-directory-alist `(("." . backupdir))))
+  (setq backup-directory-alist `(("." . ,backupdir))))
 
 
 ;; Don’t ask to create parent directories when saving files, just

@@ -1,13 +1,12 @@
 ;;; -*- lexical-binding: t; -*-
 
-
 ;; Init/Startup optimization
 (setq gc-cons-threshold 64000000)
 (add-hook 'after-init-hook #'(lambda ()
                                ;; restore after startup
 			       (setq gc-cons-threshold 800000)))
 
-
+;; Set up support for packages (and use MELPA)
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
@@ -27,6 +26,11 @@
 
 (package-initialize)
 
+(use-package benchmark-init
+  :ensure t
+  :config
+  ;; To disable collection of benchmark data after init is done.
+  (add-hook 'after-init-hook 'benchmark-init/deactivate))
 
 ;; Load other configurations
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
@@ -42,6 +46,7 @@
 (require 'tal-appearance)
 (require 'tal-behaviour)
 (require 'tal-company)
+;(require 'tal-clj)
 (require 'tal-dart)
 (require 'tal-git)
 (require 'tal-go)

@@ -72,12 +72,12 @@
          ( "M-#" . mc/unmark-next-like-this)
          ( "M-$" . mc/unmark-previous-like-this)))
 
-;; Store backups in a single directory (/var/tmp/emacs-backups) so that
+;; Store backups in a single directory (~/.emacs.d/backups) so that
 ;; they don’t clutter up my filesystem.
 (let ((backupdir
        (expand-file-name (concat user-emacs-directory "backups"))))
   (mkdir backupdir t)
-  (setq backup-directory-alist `(("." . ,backupdir))))
+  (setq backup-directory-alist `(("." . backupdir))))
 
 
 ;; Don’t ask to create parent directories when saving files, just

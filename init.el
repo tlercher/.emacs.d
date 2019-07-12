@@ -1,7 +1,7 @@
 ;;; -*- lexical-binding: t; -*-
 
 ;; Init/Startup optimization
-(setq gc-cons-threshold 64000000)
+(setq gc-cons-threshold 34359738368)
 (add-hook 'after-init-hook #'(lambda ()
                                ;; restore after startup
 			       (setq gc-cons-threshold 800000)))
@@ -24,13 +24,6 @@
 
 (setq use-package-always-ensure t)
 
-(package-initialize)
-
-(use-package benchmark-init
-  :ensure t
-  :config
-  ;; To disable collection of benchmark data after init is done.
-  (add-hook 'after-init-hook 'benchmark-init/deactivate))
 
 ;; Load other configurations
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
@@ -62,7 +55,3 @@
 ;; Maybe i should start a 'tal-emacs thing
 (use-package treemacs
   :bind ([f8] . treemacs))
-
-;; Start server
-(load "server")
-(unless (server-running-p) (server-start))

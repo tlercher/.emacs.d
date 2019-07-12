@@ -15,8 +15,8 @@
 ;; Load and set theme
 (use-package dracula-theme
   :init (load-theme 'dracula t)
-  :ensure t
-  :defer f)
+  :defer t
+  :ensure t)
 
 
 ;; Always display line and column numbers

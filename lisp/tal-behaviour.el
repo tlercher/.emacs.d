@@ -72,6 +72,12 @@
          ( "M-#" . mc/unmark-next-like-this)
          ( "M-$" . mc/unmark-previous-like-this)))
 
+;; macOS stuff
+(setq mac-option-key-is-meta nil)
+(setq mac-command-key-is-meta t)
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier nil)
+
 ;; Store backups in a single directory (~/.emacs.d/backups) so that
 ;; they don’t clutter up my filesystem.
 (let ((backupdir

@@ -47,6 +47,7 @@
 (require 'tal-lsp)
 (require 'tal-markdown)
 (require 'tal-prog)
+(require 'tal-rust)
 (require 'tal-ivy)
 ;(require 'tal-ido)
 (require 'tal-web)
